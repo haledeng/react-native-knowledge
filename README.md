@@ -16,6 +16,8 @@ justifyContent: 'center',
 alignItems: 'center'
 ```
 
+ 参考[这里](https://github.com/haledeng/react-native-knowledge/tree/master/src/Toast)
+
 ### background-image repeat效果
 css 里面的实现方式没啥好说的。
 
@@ -28,3 +30,5 @@ RN 不支持 background-image 这货，repeat 更不用想了，可以用 Image 
 不幸的是，上面的方式，只是简单实现了background-image，并没有处理 repeat 的问题。这里有两种做法：
 + 用大图，不需要repeat
 + 多个 Image 元素模拟 repeat 效果。
+
+实现方式参考[这里](https://github.com/haledeng/react-native-knowledge/tree/master/src/Background-image-repeat)
