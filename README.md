@@ -22,6 +22,7 @@ css 里面的实现方式没啥好说的。
 RN 不支持 background-image 这货，repeat 更不用想了，可以用 Image 元素实现 background-image, 具体方式：
 + 父元素 position: relative
 + 父元素插入一个子元素 <Image /> 然后设置 position: abosulte; top: 0, left: 0
+
 `上面的实现方式需要注意层级（z-index）的问题，<Image />可能会覆盖其他子元素。`
 
 不幸的是，上面的方式，只是简单实现了background-image，并没有处理 repeat 的问题。这里有两种做法：
