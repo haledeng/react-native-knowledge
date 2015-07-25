@@ -1,4 +1,5 @@
 # react-native 相关知识
+后面简称 RN。
 
 ### 实现Toast或Dialog
 在css里面，实现方式：
@@ -32,3 +33,6 @@ RN 不支持 background-image 这货，repeat 更不用想了，可以用 Image 
 + 多个 Image 元素模拟 repeat 效果。
 
 实现方式参考[这里](https://github.com/haledeng/react-native-knowledge/tree/master/src/Background-image-repeat)
+
+### 其他
++ [RN 中添加图片（本地图片）](https://github.com/haledeng/react-native-knowledge/blob/master/docs/addLocalImages.md)
