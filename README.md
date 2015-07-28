@@ -34,5 +34,12 @@ RN 不支持 background-image 这货，repeat 更不用想了，可以用 Image 
 
 实现方式参考[这里](https://github.com/haledeng/react-native-knowledge/tree/master/src/Background-image-repeat)
 
+### Text-indent支持
+RN 不支持 text-indent 属性，段落前面的空格需要额外的处理方式，目前可以用 Text 标签包2个汉字，然后将
+color: 'transparent'，不显示汉字。
+
+### setNativeProps 方法
+
+
 ### 其他
 + [RN 中添加图片（本地图片）](https://github.com/haledeng/react-native-knowledge/blob/master/docs/addLocalImages.md)
