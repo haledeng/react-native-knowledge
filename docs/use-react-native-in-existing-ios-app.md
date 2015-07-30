@@ -13,3 +13,5 @@ pod 'React'
 pod 'React/RCTText'
 ```
 + pod install
+关闭 Xcode 相关的项目
+Build Settings -> Other linker flags -> double click . Add $(inherited) to a new line .
