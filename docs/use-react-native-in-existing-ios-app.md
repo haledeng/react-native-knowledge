@@ -15,3 +15,12 @@ pod 'React/RCTText'
 + pod install
 关闭 Xcode 相关的项目
 Build Settings -> Other linker flags -> double click . Add $(inherited) to a new line .
+
+
+### 本地编译bundle
++ react-native bundle --minify
++ curl 'http://localhost:8081/xxx/index.ios.bundle' -o main.jsbundle，依赖运行的打包服务
+
+
+### 缓存和打包
+
