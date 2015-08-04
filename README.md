@@ -66,7 +66,12 @@ Native 部分定义接口
 #import "RCTBridgeModule.h"
  
 @interface MyObjcClass : NSObject <RCTBridgeModule>
+ RCT_EXPORT_MODULE();
  
+ 
+RCT_EXPORT_METHOD(squareMe:(int)number callback:(RCTResponseSenderBlock)callback) {
+    callback(@[[NSNull null], [NSNumber numberWithInt:(number * number)]]);
+}
 @end
 ```
 
@@ -75,6 +80,11 @@ JS 部分
 var {
  MyObjcClass
 } = require('NativeModules');
+
+MyObjcClass.squareMe(3, function(err, number){
+    console.log(number);
+});
 ```
+
 ### 其他
 + [RN 中添加图片（本地图片）](https://github.com/haledeng/react-native-knowledge/blob/master/docs/addLocalImages.md)
