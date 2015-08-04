@@ -58,5 +58,23 @@ var imagePath = '~/images/feedback-bg@2x_33e9d22.jpg';
 ```
 RCTConvert.m中的路径查找那里没有解析相对路径。
 
+
+### Js 调用 Native 接口
+使用 RCTBridgeModule 模块连接 native 和 RN 。
+Native 部分定义接口
+```
+#import "RCTBridgeModule.h"
+ 
+@interface MyObjcClass : NSObject <RCTBridgeModule>
+ 
+@end
+```
+
+JS 部分
+```
+var {
+ MyObjcClass
+} = require('NativeModules');
+```
 ### 其他
 + [RN 中添加图片（本地图片）](https://github.com/haledeng/react-native-knowledge/blob/master/docs/addLocalImages.md)
