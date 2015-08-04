@@ -38,8 +38,25 @@ RN 不支持 background-image 这货，repeat 更不用想了，可以用 Image 
 RN 不支持 text-indent 属性，段落前面的空格需要额外的处理方式，目前可以用 Text 标签包2个汉字，然后将
 color: 'transparent'，不显示汉字。
 
-### setNativeProps 方法
+### 几种引入图片的方式
++ http 方式引入线上图片
++ 添加本地图片资源[here](https://github.com/haledeng/react-native-knowledge/blob/master/docs/addLocalImages.md)
++ base64 引入图片
+```
+<Image source={{isStatic: true, uri: 'data:image/jpeg;base64,' + base64}} />
 
+```
++ 绝对路径引入图片
+```
+var imagePath = '/Users/helondeng/Documents/edu_proj/App/images/feedback-bg@2x_33e9d22.jpg';
+<Image source={{isStatic: true, uri: 'data:image/jpeg;base64,' + imagePath}} />
+```
++ 相对路径引入图片(暂时未走通)
+```
+var imagePath = '~/images/feedback-bg@2x_33e9d22.jpg';
+<Image source={{isStatic: true, uri: 'data:image/jpeg;base64,' + imagePath}} />
+```
+RCTConvert.m中的路径查找那里没有解析相对路径。
 
 ### 其他
 + [RN 中添加图片（本地图片）](https://github.com/haledeng/react-native-knowledge/blob/master/docs/addLocalImages.md)
