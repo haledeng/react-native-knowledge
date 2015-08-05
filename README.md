@@ -51,10 +51,10 @@ color: 'transparent'，不显示汉字。
 var imagePath = '/Users/helondeng/Documents/edu_proj/App/images/feedback-bg@2x_33e9d22.jpg';
 <Image source={{isStatic: true, uri: 'data:image/jpeg;base64,' + imagePath}} />
 ```
-+ 相对路径引入图片(暂时未走通)
++ 相对路径引入图片，需要在 Building Phases -> copy bundle resources 中引入 images 目录，那么在 js 中就可以直接引用image目录下的图片
 ```
-var imagePath = '~/images/feedback-bg@2x_33e9d22.jpg';
-<Image source={{isStatic: true, uri: 'data:image/jpeg;base64,' + imagePath}} />
+var imagePath = 'images/feedback-bg@2x_33e9d22.jpg';
+<Image source={{isStatic: true, uri: imagePath}} />
 ```
 RCTConvert.m中的路径查找那里没有解析相对路径。
 
