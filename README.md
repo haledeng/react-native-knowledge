@@ -91,3 +91,7 @@ MyObjcClass.squareMe(3, function(err, number){
 
 ### android 调试
 + [调试](https://github.com/haledeng/react-native-knowledge/blob/master/docs/android%20debug.md)
+
+### android 版问题
++ 默认是走http方式加载线上bundle，但是没有找到代码里面有配置http地址，如何像iOS一样走offline模式
++ 如何与现有的app集成，目前的方式是将整个项目生成apk
