@@ -88,3 +88,6 @@ MyObjcClass.squareMe(3, function(err, number){
 
 ### 其他
 + [RN 中添加图片（本地图片）](https://github.com/haledeng/react-native-knowledge/blob/master/docs/addLocalImages.md)
+
+### android 调试
++ [调试](https://github.com/haledeng/react-native-knowledge/blob/master/docs/android%20debug.md)
