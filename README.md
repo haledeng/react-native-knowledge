@@ -101,4 +101,6 @@ node_modules/react-native/local-cli/bundle.js 处理了bundle的生成方式，�
 运行 `react-native run-android` 会把bundle文件写入到apk中，这样居然走通了offline的模式，
 应该时`默认先到本地查找bundle，如果找不到，就走http请求`。
 
+如果走线上，默认的http的前缀地址是在哪里配置的？
+
 + 如何与现有的app集成，目前的方式是将整个项目生成apk
