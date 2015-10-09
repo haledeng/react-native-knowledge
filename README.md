@@ -94,4 +94,9 @@ MyObjcClass.squareMe(3, function(err, number){
 
 ### android 版问题
 + 默认是走http方式加载线上bundle，但是没有找到代码里面有配置http地址，如何像iOS一样走offline模式
+ 
+node_modules/react-native/local-cli/bundle.js 处理了bundle的生成方式，生成路径 `android/app/src/main/assets/index.android.bundle`，由于assets文件夹不存在，这里居然报错。
+ react-native 默认的bundle命令居然不生成android的bundle文件，需要额外的命令去生成
+ `react-native bundle --platform android`
+
 + 如何与现有的app集成，目前的方式是将整个项目生成apk
