@@ -98,5 +98,7 @@ MyObjcClass.squareMe(3, function(err, number){
 node_modules/react-native/local-cli/bundle.js 处理了bundle的生成方式，生成路径 `android/app/src/main/assets/index.android.bundle`，由于assets文件夹不存在，这里居然报错。
  react-native 默认的bundle命令居然不生成android的bundle文件，需要额外的命令去生成
  `react-native bundle --platform android`
+运行 `react-native run-android` 会把bundle文件写入到apk中，这样居然走通了offline的模式，
+应该时`默认先到本地查找bundle，如果找不到，就走http请求`。
 
 + 如何与现有的app集成，目前的方式是将整个项目生成apk
