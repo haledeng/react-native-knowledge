@@ -104,3 +104,14 @@ node_modules/react-native/local-cli/bundle.js 处理了bundle的生成方式，�
 如果走线上，默认的http的前缀地址是在哪里配置的？
 
 + 如何与现有的app集成，目前的方式是将整个项目生成apk
+
+
+### android 执行流程
+运行 `react-native run-android` 都干了哪些事情？
++ Start  JS  Server. 具体流程是：请求/status 查看server是否已经打开，如果没有，则去执行 `packager/packager.js`
+开启server，监听8081端口（这里调用有些曲折 run-android.js -> run-packager.js -> packager/launchPackager.command -> packager/packager.sh -> packager/packager.js）.
+
+在 packager.js 中只处理了一些简单的请求，核心的请求执行逻辑在 packager/react-packager目录中处理的，
+比如 `http://localhost:8081/index.android.bundle?platform=android`，请求这个链接时，实际是调用 packager/react-packager/Bundle/index.js 处理的，实际的bundle文件并没有声称到项目目录下，而是动态编译的。
+
++ 讲编译的apk，安装到手机上。
