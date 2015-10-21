@@ -21,3 +21,8 @@ node_modules/react-native/local-cli/bundle.js 处理了bundle的生成方式，�
 比如 `http://localhost:8081/index.android.bundle?platform=android`，请求这个链接时，实际是调用 packager/react-packager/Bundle/index.js 处理的，实际的bundle文件并没有声称到项目目录下，而是动态编译的。
 
 + 将编译的apk，安装到手机上。
+
+
+### 开发问题
++ 标注了xxxandroid的有好几个都不能用，不知道是否是android版本的问题
++ Image中使用http的图片，不要加 isStatic:true
